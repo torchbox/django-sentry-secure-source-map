@@ -1,5 +1,11 @@
 # django-sentry-secure-source-map
 
+
+![CI](https://github.com/torchbox/django-sentry-secure-source-map/workflows/CI/badge.svg)
+![PyPI](https://img.shields.io/pypi/v/django-sentry-secure-source-map.svg)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-sentry-secure-source-map.svg)
+
+
 A middleware to ensure only Sentry can access source maps.
 
 When enabled, only requests from Sentry will be able to access source maps (any URL starting with `STATIC_URL` and ending `.map`).
