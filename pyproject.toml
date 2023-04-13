@@ -4,11 +4,26 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "django-sentry-secure-source-map"
-description = ""
+description = "A middleware to ensure only Sentry can access source maps"
 authors = [{name = "Torchbox", email = "tech@torchbox.com"}]
 readme = "README.md"
 license = {file = "LICENSE"}
-classifiers = ["License :: OSI Approved :: MIT License"]
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development",
+]
 dynamic = ["version"]
 requires-python = ">=3.7"
 dependencies = [

@@ -5,6 +5,10 @@ from django.utils.crypto import constant_time_compare
 
 
 class SentrySecureSourceMapMiddleware:
+    """
+    Only allow Sentry to access sourcemap files.
+    """
+
     def __init__(self, get_response):
         if not settings.SENTRY_SECURITY_TOKEN:
             raise MiddlewareNotUsed
