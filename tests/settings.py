@@ -1,15 +1,14 @@
 import os
-import re
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "tests",
-    "django_sentry_protect",
+    "sentry_secure_source_map",
 ]
 
-MIDDLEWARE = ["django_sentry_protect.SentryProtectMiddleware"]
+MIDDLEWARE = ["sentry_secure_source_map.SentrySecureSourceMapMiddleware"]
 
 SECRET_KEY = "abcde12345"
 
@@ -22,4 +21,3 @@ ROOT_URLCONF = "tests.urls"
 
 
 SENTRY_SECURITY_TOKEN = "sentry-token"
-SENTRY_PROTECTED_PATHS = [re.escape(STATIC_URL) + r".+\.map$"]
