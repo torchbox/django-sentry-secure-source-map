@@ -30,6 +30,14 @@ lint = [
 [project.urls]
 Home = "https://torchbox.com"
 
+[tool.flit.module]
+name = "django_sentry_protect"
+
+[tool.flit.sdist]
+exclude = [
+    "tests",
+]
+
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "tests.settings"
 python_files = [
