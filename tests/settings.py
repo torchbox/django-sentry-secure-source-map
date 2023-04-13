@@ -8,9 +8,7 @@ INSTALLED_APPS = [
     "django_sentry_protect",
 ]
 
-MIDDLEWARE = [
-    "django_sentry_protect.SentryProtectMiddleware"
-]
+MIDDLEWARE = ["django_sentry_protect.SentryProtectMiddleware"]
 
 SECRET_KEY = "abcde12345"
 SENTRY_SECURITY_TOKEN = "sentry-token"

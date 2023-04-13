@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.core.exceptions import MiddlewareNotUsed
-from django.utils.crypto import constant_time_compare
 from django.http import HttpResponseForbidden
+from django.utils.crypto import constant_time_compare
 
 
 class SentryProtectMiddleware:

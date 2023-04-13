@@ -22,6 +22,10 @@ test = [
     "pytest-django==4.5.2",
     "pytest==7.1.2",
 ]
+lint = [
+    "ruff==0.0.261",
+    "black==23.3.0",
+]
 
 [project.urls]
 Home = "https://torchbox.com"
@@ -31,3 +35,7 @@ DJANGO_SETTINGS_MODULE = "tests.settings"
 python_files = [
     "tests.py"
 ]
+
+[tool.ruff]
+select = ["E", "F", "I", "W", "N", "B", "A", "C4", "T20", "DJ"]
+ignore = ["E501"]

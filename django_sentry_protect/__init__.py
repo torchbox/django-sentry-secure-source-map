@@ -1,4 +1,4 @@
 __version__ = "0.0.1"
 
 
-from .middleware import SentryProtectMiddleware # noqa
+from .middleware import SentryProtectMiddleware  # noqa
