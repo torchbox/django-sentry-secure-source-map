@@ -10,7 +10,7 @@ class SentrySecureSourceMapMiddleware:
     """
 
     def __init__(self, get_response):
-        if not settings.SENTRY_SECURITY_TOKEN:
+        if not getattr(settings, "SENTRY_SECURITY_TOKEN", ""):
             raise MiddlewareNotUsed
 
         self.get_response = get_response
