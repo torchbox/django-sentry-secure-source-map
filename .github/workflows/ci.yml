@@ -32,7 +32,7 @@ jobs:
           pip install -e .[lint,test]
           pip install -U Django==${{ matrix.django-version }}
       - name: Run tests
-        run: pytest
+        run: pytest --cov=sentry_secure_source_map
       - name: Run linters
         run: |
           ruff check .
