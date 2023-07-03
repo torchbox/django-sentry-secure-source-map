@@ -10,7 +10,9 @@ class SentrySecureSourceMapMiddleware:
     """
 
     def __init__(self, get_response):
-        if not getattr(settings, "SENTRY_SECURITY_TOKEN", ""):
+        self.sentry_security_token = getattr(settings, "SENTRY_SECURITY_TOKEN", "")
+
+        if not self.sentry_security_token:
             raise MiddlewareNotUsed
 
         self.get_response = get_response
@@ -21,7 +23,7 @@ class SentrySecureSourceMapMiddleware:
         ):
             sentry_token = request.headers.get("X-Sentry-Token", "")
 
-            if not constant_time_compare(sentry_token, settings.SENTRY_SECURITY_TOKEN):
+            if not constant_time_compare(sentry_token, self.sentry_security_token):
                 return HttpResponseForbidden()
 
         return self.get_response(request)
