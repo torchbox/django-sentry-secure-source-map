@@ -37,8 +37,7 @@ test = [
     "pytest",
 ]
 lint = [
-    "ruff==0.0.261",
-    "black==23.3.0",
+    "ruff==0.6.9",
 ]
 
 [project.urls]
@@ -58,6 +57,6 @@ python_files = [
     "tests.py"
 ]
 
-[tool.ruff]
+[tool.ruff.lint]
 select = ["E", "F", "I", "W", "N", "B", "A", "C4", "T20", "DJ"]
 ignore = ["E501"]
